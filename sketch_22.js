@@ -33,32 +33,34 @@ function draw() {
     push();
     translate(windowWidth / 6, windowHeight / 6);
     noFill();
-    ellipse(0, 0, 160, 160);
+    ellipse(0, 0, 130, 130);
     fill('Black');
     ellipse(0, 0, 10, 10);
     rotate(map(second(), 0, 60, 0, 360) + 180 + 45);
     fill('Pink');
     stroke('White');
-    line(0, 0, 40, 40);
-    ellipse(40, 40, 5, 5);
+    line(0, 0, 45, 45);
+    ellipse(45, 45, 5, 5);
     pop();
 
     push();
     translate(windowWidth / 6, windowHeight / 6);
     rotate(map(minute(), 0, 60, 0, 360) + 180 + 45);
     fill('Red');
-    line(0, 0, 50, 50);
+    stroke('Red');
+    line(0, 0, 40, 40);
     stroke('White');
-    rect(50, 50, 10, 10);
+    rect(40, 40, 5, 5);
     pop();
 
     push();
     translate(windowWidth / 6, windowHeight / 6);
     rotate(map(hour() % 12, 0, 12, 0, 360) + 180 + 45);
     fill('Blue');
+    stroke('Blue');
     line(0, 0, 30, 30);
     stroke('White');
-    rect(30, 30, 10, 10);
+    rect(30, 30, 5, 5);
     pop();
 
     text(`${hour()}:${minute()}:${second()}`, 190, 170);
