@@ -1,10 +1,13 @@
-class Box {
-    constructor(x, y, w, h, world) {
+class Boundary {
+    constructor(x, y, w, h, a, world) {
         this.options = {
             friction: 0,
             restitution: 0.6,
+            angle: a,
+            isStatic: true
         };
         this.body = Bodies.rectangle(x, y, w, h, this.options);
+        //this.body.angle = PI / 4;
         Composite.add(world, this.body);
 
         this.show = () => {
@@ -17,7 +20,7 @@ class Box {
             rectMode(CENTER);
             strokeWeight(1);
             stroke(255);
-            fill('DeepSkyBlue');
+            fill('Yellow');
             rect(0, 0, w, h);
             pop();
         };

@@ -50,7 +50,7 @@ function draw() {
 }
 
 function mouseDragged() {
-    boxes.push(new Box(mouseX, mouseY, 20, 20, world));
+    boxes.push(new Box(mouseX, mouseY, random(1, 50), random(1, 50), world));
 }
 
 // function keyPressed() {

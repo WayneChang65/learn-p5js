@@ -1,10 +1,10 @@
-class Box {
-    constructor(x, y, w, h, world) {
+class Ball {
+    constructor(x, y, d, world) {
         this.options = {
             friction: 0,
             restitution: 0.6,
         };
-        this.body = Bodies.rectangle(x, y, w, h, this.options);
+        this.body = Bodies.circle(x, y, d / 2, this.options);
         Composite.add(world, this.body);
 
         this.show = () => {
@@ -18,7 +18,8 @@ class Box {
             strokeWeight(1);
             stroke(255);
             fill('DeepSkyBlue');
-            rect(0, 0, w, h);
+            ellipse(0, 0, d, d);
+
             pop();
         };
     }
