@@ -7,6 +7,14 @@ class Ball {
         this.body = Bodies.circle(x, y, d / 2, this.options);
         Composite.add(world, this.body);
 
+        this.isOffScreen = () => {
+            return this.body.position.y > windowHeight + 100;
+        };
+
+        this.removeFromTheWorld = () => {
+            World.remove(world, this.body);
+        };
+
         this.show = () => {
             let pos = this.body.position;
             let angle = this.body.angle;
