@@ -1,0 +1,14 @@
+version: "3"
+services:
+  p5js-web:
+      image: wayne/p5js-web:0.0.1
+      hostname: p5js-web
+      ports:
+        - 8084:80
+      stdin_open: true
+      tty: true
+      restart: unless-stopped
+
+      volumes:
+        - ./data/db:/usr/local/apache2/htdocs/db:ro
+      container_name: p5js-web

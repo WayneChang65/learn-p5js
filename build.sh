@@ -1,0 +1,1 @@
+sudo docker build . -t wayne/p5js-web:1.0.0 --no-cache
