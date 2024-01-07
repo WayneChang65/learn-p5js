@@ -1,7 +1,7 @@
 version: "3"
 services:
   p5js-web:
-      image: wayne/p5js-web:0.0.1
+      image: wayne/p5js-web:1.0.2
       hostname: p5js-web
       ports:
         - 8084:80
